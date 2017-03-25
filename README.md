@@ -6,6 +6,10 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+	
+	This application is using:
+		 Ruby 2.2.2
+		 Rails 5.0.2
 
 * System dependencies
 
