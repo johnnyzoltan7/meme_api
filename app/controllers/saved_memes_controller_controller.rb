@@ -1,0 +1,2 @@
+class SavedMemesControllerController < ApplicationController
+end
