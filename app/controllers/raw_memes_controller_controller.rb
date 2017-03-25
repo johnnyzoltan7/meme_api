@@ -1,0 +1,2 @@
+class RawMemesControllerController < ApplicationController
+end
