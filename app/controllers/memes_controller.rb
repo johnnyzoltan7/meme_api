@@ -4,13 +4,18 @@ class MemesController < ApplicationController
   	@meme = Meme.new
   	@meme.text = Meme.generate_random_text
   	@meme.url = Meme.generate_random_url
+  	@meme.save
 
   	render json: @meme
-
   end
 
-  def save
-  	@meme.save
+  def returnLast
+  	
+  end
+
+  def returnAll
+
   end
 
 end
+

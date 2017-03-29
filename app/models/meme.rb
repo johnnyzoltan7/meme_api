@@ -58,5 +58,4 @@ class Meme < ApplicationRecord
 		MEME_URLS.sample
 	end
 
-
 end
