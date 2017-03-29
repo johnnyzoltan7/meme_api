@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  get 'memes/generate' => 'memes#generate'
+  get '/new'	=> 'memes#new'
 
-  get 'memes/save'	=> 'memes#save'
+  get '/generate' => 'memes#generate'
 
-  get 'meme/returnAll'	=> 'memes#returnAll'
+  get '/returnLast'	=> 'memes#returnLast'
+
+  get '/returnAll'	=> 'memes#returnAll'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
