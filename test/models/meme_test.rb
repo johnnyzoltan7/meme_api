@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SavedMemeTest < ActiveSupport::TestCase
+class MemeTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
