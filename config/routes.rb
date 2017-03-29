@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get '/new'	=> 'memes#new'
-
   get '/generate' => 'memes#generate'
 
   get '/returnLast'	=> 'memes#returnLast'

@@ -1,38 +1,52 @@
 class MemesController < ApplicationController
-  	
-  def new
-  	@meme = Meme.new
+	def generate
+		@meme = Meme.new
+		@meme.text = Meme.generate_random_text
+		@meme.image_url = Meme.generate_random_url
 
-  	render json: @meme
-  end
+		if @meme.save
+			render json: {
+				message: "Success!",
+				phrase: @meme.text,
+				url: @meme.image_url
+			}
+		else
+			render json: {
+				message: "could not generate meme. feeels bad maaan"
+			}
+		end
 
-  def generate
-  	@meme = Meme.new
-  	@meme.text = Meme.generate_random_text
-  	@meme.image_url = Meme.generate_random_url
-  	
-  	if @meme.save
-  		render json: {
-  			message: "Success!",
-  			phrase: @meme.text,
-  			url: @meme.image_url
-  		}
-  	else
-  		render json: {
-  			message: "could not generate meme. feeels bad maaan"
-  		}
-  	end
+	end
 
-  end
+	def returnLast
+		@meme = Meme.order("id").last
 
-  def returnLast
-  	@meme = Meme.
-  end
+		begin
+			render json: {
+				message: "Success!",
+				meme: {phrase: @meme.text, url: @meme.image_url}
+			}
+		rescue
+			render json: {
+				message: "There is something wrong"
+			}
+		end  	
+	end
 
-  def returnAll
-  	@meme = Meme.all
+	def returnAll
+		@meme = Meme.all
 
-  	render json: @meme
-  end
+		begin
+			render json: {
+				message: "Success!",
+				memes: @meme
+
+			}
+		rescue
+			render json: {
+				message: "something went wrong on the server"
+			}
+		end
+	end
 
 end
