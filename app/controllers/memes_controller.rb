@@ -6,45 +6,54 @@ class MemesController < ApplicationController
 
 		if @meme.save
 			render json: {
-				message: "Success!",
+				message: "Success: generated random meme",
+				id: @meme.id,
 				phrase: @meme.text,
-				url: @meme.image_url
+				url: @meme.image_url,
+				status: 200
 			}
 		else
 			render json: {
-				message: "could not generate meme. feeels bad maaan"
+				message: "could not generate meme. feeels bad maaan",
+				status: 500
 			}
 		end
 
 	end
 
-	def returnLast
-		@meme = Meme.order("id").last
+	def save
+		@saved_meme = SavedMeme.new
+		@saved_meme = Meme.order("id").last	
 
-		begin
+		if @saved_meme.save
 			render json: {
-				message: "Success!",
-				meme: {phrase: @meme.text, url: @meme.image_url}
+				message: "Success: meme saved",
+				id: @saved_meme.id,
+				phrase: @saved_meme.text,
+				url: @saved_meme.image_url,
+				status: 200
 			}
-		rescue
+		else
 			render json: {
-				message: "There is something wrong"
+				message: "Its too good to save....",
+				status: 500
 			}
-		end  	
+		end
 	end
 
-	def returnAll
-		@meme = Meme.all
+	def all
+		@saved_memes = SavedMeme.all
 
 		begin
 			render json: {
-				message: "Success!",
-				memes: @meme
-
+				message: "Success: return all saved memes",
+				memes: @saved_memes,
+				status: 200
 			}
 		rescue
 			render json: {
-				message: "something went wrong on the server"
+				message: "something went wrong on the server",
+				status: 500
 			}
 		end
 	end
