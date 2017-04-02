@@ -21,21 +21,6 @@ class MemesController < ApplicationController
 		end
 	end
 
-	def return_last
-		@meme = Meme.last
-
-		begin
-			render json: {
-				message: "Success!",
-				meme: {phrase: @meme.text, url: @meme.image_url}
-			}
-		rescue
-			render json: {
-				message: "There is something wrong"
-			}
-		end
-	end
-
 	def return_all
 		@meme = Meme.all
 

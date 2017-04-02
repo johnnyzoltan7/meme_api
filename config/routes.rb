@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   get '/generate' => 'memes#generate'
 
-  get '/return_last'	=> 'memes#return_last'
-
   get '/return_all'	=> 'memes#return_all'
 
   post '/save_meme' => 'memes#save_meme'
