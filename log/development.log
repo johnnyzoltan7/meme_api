@@ -1214,3 +1214,560 @@ Started GET "/generate" for ::1 at 2017-04-01 18:31:38 -0700
 SyntaxError (/Users/aprieger/Projects/meme_api/app/controllers/memes_controller.rb:65: syntax error, unexpected end-of-input, expecting keyword_end):
   
 app/controllers/memes_controller.rb:65: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/generate" for ::1 at 2017-04-01 18:36:52 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMeme Load (0.1ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "55"], ["image_url", "99"], ["created_at", 2017-04-02 01:36:52 UTC], ["updated_at", 2017-04-02 01:36:52 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 21ms (Views: 0.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:36:55 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.4ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "22"], ["image_url", "00"], ["created_at", 2017-04-02 01:36:55 UTC], ["updated_at", 2017-04-02 01:36:55 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:36:56 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "22"], ["image_url", "44"], ["created_at", 2017-04-02 01:36:56 UTC], ["updated_at", 2017-04-02 01:36:56 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:36:56 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 5]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "99"], ["image_url", "6"], ["created_at", 2017-04-02 01:36:56 UTC], ["updated_at", 2017-04-02 01:36:56 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:36:56 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "99"], ["image_url", "99"], ["created_at", 2017-04-02 01:36:56 UTC], ["updated_at", 2017-04-02 01:36:56 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:36:57 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 7]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "11"], ["image_url", "1"], ["created_at", 2017-04-02 01:36:57 UTC], ["updated_at", 2017-04-02 01:36:57 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:36:57 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "4"], ["image_url", "6"], ["created_at", 2017-04-02 01:36:57 UTC], ["updated_at", 2017-04-02 01:36:57 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:36:58 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 9]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "99"], ["image_url", "11"], ["created_at", 2017-04-02 01:36:58 UTC], ["updated_at", 2017-04-02 01:36:58 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:36:58 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 10]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "00"], ["image_url", "00"], ["created_at", 2017-04-02 01:36:58 UTC], ["updated_at", 2017-04-02 01:36:58 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:36:58 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 11]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "66"], ["image_url", "9"], ["created_at", 2017-04-02 01:36:58 UTC], ["updated_at", 2017-04-02 01:36:58 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:36:59 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 12]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "7"], ["image_url", "2"], ["created_at", 2017-04-02 01:36:59 UTC], ["updated_at", 2017-04-02 01:36:59 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/returnAll" for ::1 at 2017-04-01 18:37:07 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/returnAll"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/return_all" for ::1 at 2017-04-01 18:37:13 -0700
+Processing by MemesController#return_all as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT "memes".* FROM "memes"[0m
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/save_meme" for ::1 at 2017-04-01 18:37:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/save_meme"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/save_meme" for ::1 at 2017-04-01 18:37:39 -0700
+Processing by MemesController#save_meme as */*
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/return_all" for ::1 at 2017-04-01 18:37:48 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/return_all"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/return_all" for ::1 at 2017-04-01 18:37:52 -0700
+Processing by MemesController#return_all as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT "memes".* FROM "memes"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/save_meme" for ::1 at 2017-04-01 18:38:36 -0700
+Processing by MemesController#save_meme as */*
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/save_meme" for ::1 at 2017-04-01 18:38:37 -0700
+Processing by MemesController#save_meme as */*
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/save_meme" for ::1 at 2017-04-01 18:38:37 -0700
+Processing by MemesController#save_meme as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/save_meme" for ::1 at 2017-04-01 18:38:38 -0700
+Processing by MemesController#save_meme as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/save_meme" for ::1 at 2017-04-01 18:38:38 -0700
+Processing by MemesController#save_meme as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/return_all" for ::1 at 2017-04-01 18:38:47 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/return_all"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/return_all" for ::1 at 2017-04-01 18:38:49 -0700
+Processing by MemesController#return_all as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT "memes".* FROM "memes"[0m
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:39:08 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 13]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "44"], ["image_url", "99"], ["created_at", 2017-04-02 01:39:08 UTC], ["updated_at", 2017-04-02 01:39:08 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:39:08 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "7"], ["image_url", "33"], ["created_at", 2017-04-02 01:39:08 UTC], ["updated_at", 2017-04-02 01:39:08 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:39:08 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 15]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "44"], ["image_url", "88"], ["created_at", 2017-04-02 01:39:08 UTC], ["updated_at", 2017-04-02 01:39:08 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:39:09 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 16]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "8"], ["image_url", "44"], ["created_at", 2017-04-02 01:39:09 UTC], ["updated_at", 2017-04-02 01:39:09 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:39:09 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 17]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "1"], ["image_url", "7"], ["created_at", 2017-04-02 01:39:09 UTC], ["updated_at", 2017-04-02 01:39:09 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:39:09 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 18]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "3"], ["image_url", "66"], ["created_at", 2017-04-02 01:39:09 UTC], ["updated_at", 2017-04-02 01:39:09 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:39:09 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 19]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "21"], ["image_url", "20"], ["created_at", 2017-04-02 01:39:09 UTC], ["updated_at", 2017-04-02 01:39:09 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/return_all" for ::1 at 2017-04-01 18:39:15 -0700
+Processing by MemesController#return_all as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT "memes".* FROM "memes"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/save_meme" for ::1 at 2017-04-01 18:39:32 -0700
+Processing by MemesController#save_meme as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/return_all" for ::1 at 2017-04-01 18:39:53 -0700
+Processing by MemesController#return_all as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT "memes".* FROM "memes"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/save_meme" for ::1 at 2017-04-01 18:44:33 -0700
+Processing by MemesController#save_meme as */*
+  [1m[36mMeme Load (0.1ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/return_all" for ::1 at 2017-04-01 18:44:41 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/return_all"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/return_all" for ::1 at 2017-04-01 18:44:44 -0700
+Processing by MemesController#return_all as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT "memes".* FROM "memes"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:45:08 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 20]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "6"], ["image_url", "1"], ["created_at", 2017-04-02 01:45:08 UTC], ["updated_at", 2017-04-02 01:45:08 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/save_meme" for ::1 at 2017-04-01 18:45:15 -0700
+Processing by MemesController#save_meme as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/return_all" for ::1 at 2017-04-01 18:45:21 -0700
+Processing by MemesController#return_all as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT "memes".* FROM "memes"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/save_meme" for ::1 at 2017-04-01 18:46:16 -0700
+Processing by MemesController#save_meme as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/return_all" for ::1 at 2017-04-01 18:46:22 -0700
+Processing by MemesController#return_all as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT "memes".* FROM "memes"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:46:42 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 21]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "88"], ["image_url", "77"], ["created_at", 2017-04-02 01:46:42 UTC], ["updated_at", 2017-04-02 01:46:42 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 17ms (Views: 0.3ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/save_meme" for ::1 at 2017-04-01 18:46:48 -0700
+Processing by MemesController#save_meme as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/return_all" for ::1 at 2017-04-01 18:46:53 -0700
+Processing by MemesController#return_all as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT "memes".* FROM "memes"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/save_meme" for ::1 at 2017-04-01 18:47:43 -0700
+Processing by MemesController#save_meme as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "88"], ["image_url", "77"], ["created_at", 2017-04-02 01:47:43 UTC], ["updated_at", 2017-04-02 01:47:43 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 17ms (Views: 0.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/return_all" for ::1 at 2017-04-01 18:47:48 -0700
+Processing by MemesController#return_all as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT "memes".* FROM "memes"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/generate" for ::1 at 2017-04-01 18:47:57 -0700
+Processing by MemesController#generate as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" ORDER BY "memes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "memes" WHERE "memes"."id" = ?[0m  [["id", 23]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "55"], ["image_url", "20"], ["created_at", 2017-04-02 01:47:57 UTC], ["updated_at", 2017-04-02 01:47:57 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/return_all" for ::1 at 2017-04-01 18:48:06 -0700
+Processing by MemesController#return_all as */*
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT "memes".* FROM "memes"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+

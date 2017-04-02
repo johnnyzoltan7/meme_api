@@ -58,5 +58,5 @@ class Meme < ApplicationRecord
 		MEME_TEXT.sample[:text]
 	end
 
-	private 
+	private
 end

@@ -6,6 +6,7 @@ class MemesController < ApplicationController
 
 		if (!Meme.last.nil?)
 			Meme.last.destroy
+		end
 
 		if @meme.save
 			render json: {
@@ -51,7 +52,8 @@ class MemesController < ApplicationController
 	end
 
 	def save_meme
-		@saved = Meme.last
+		@saved = Meme.new
+		@saved = Meme.last.dup
 
 		if @saved.save
 			render json: {
