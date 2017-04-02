@@ -3,13 +3,13 @@ class Meme < ApplicationRecord
   validates :image_url,  presence: true
 
   MEME_URLS = [
-		{ :name => "one", 		:url => "1"},
-		{ :name => "two", 		:url => "2"},
-		{ :name => "three", 	:url => "3"},
-		{ :name => "four", 		:url => "4"},
-		{ :name => "five", 		:url => "5"},
-		{ :name => "six", 		:url => "6"},
-		{ :name => "seven", 	:url => "7"},
+		{ :name => "one", 		:url => "https://cdn.meme.am/images/2965710.jpg"},
+		{ :name => "two", 		:url => "https://i.imgflip.com/183pvg.jpg"},
+		{ :name => "three", 	:url => "http://images.memes.com/character/tile/12-year-old-redditor.jpg"},
+		{ :name => "four", 		:url => "https://imgflip.com/s/meme/Star-Wars-Yoda.jpg"},
+		{ :name => "five", 		:url => "https://s-media-cache-ak0.pinimg.com/736x/ca/7c/0a/ca7c0a77eecd2b59455d61309d18f5b2.jpg"},
+		{ :name => "six", 		:url => "http://1.bp.blogspot.com/-qGgPqYBh38Q/VplUDyJkCFI/AAAAAAACCUE/DMA0E5VqrKU/s1600/Dads%2Bare%2Bthe%2BOriginal%2BHipsters%2B%252811%2529.jpg"},
+		{ :name => "seven", 	:url => "http://i2.kym-cdn.com/photos/images/original/000/320/114/585.jpg"},
 		{ :name => "eight", 	:url => "8"},
 		{ :name => "nine", 		:url => "9"},
 		{ :name => "ten", 		:url => "00"},
@@ -41,13 +41,13 @@ class Meme < ApplicationRecord
 		{ :name => "twelve", 	:text => "22" },
 		{ :name => "thirteen", 	:text => "33" },
 		{ :name => "fourteen", 	:text => "44" },
-		{ :name => "fifteen", 	:text => "55" },
-		{ :name => "sixteen", 	:text => "66" },
-		{ :name => "seventeen",	:text => "77" },
-		{ :name => "eightteen",	:text => "88" },
-		{ :name => "nineteen", 	:text => "99" },
-		{ :name => "twenty", 	:text => "20" },
-		{ :name => "twentyone",	:text => "21" }
+		{ :name => "fifteen", 	:text => "I want it over three" },
+		{ :name => "sixteen", 	:text => "wait, wut" },
+		{ :name => "seventeen",	:text => "I know, right?" },
+		{ :name => "eightteen",	:text => "Wanna go for a hike?" },
+		{ :name => "nineteen", 	:text => "Go to bed dude" },
+		{ :name => "twenty", 	:text => "When You can't get a date to the vet" },
+		{ :name => "twentyone",	:text => "My body is ready." }
 	].freeze
 
 	def self.generate_random_url
