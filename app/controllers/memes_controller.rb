@@ -4,6 +4,9 @@ class MemesController < ApplicationController
 		@meme.text = Meme.generate_random_text
 		@meme.image_url = Meme.generate_random_url
 
+		if (!Meme.last.nil?)
+			Meme.last.destroy
+
 		if @meme.save
 			render json: {
 				message: "Success!",
@@ -15,11 +18,10 @@ class MemesController < ApplicationController
 				message: "could not generate meme. feeels bad maaan"
 			}
 		end
-
 	end
 
-	def returnLast
-		@meme = Meme.order("id").last
+	def return_last
+		@meme = Meme.last
 
 		begin
 			render json: {
@@ -30,17 +32,16 @@ class MemesController < ApplicationController
 			render json: {
 				message: "There is something wrong"
 			}
-		end  	
+		end
 	end
 
-	def returnAll
+	def return_all
 		@meme = Meme.all
 
 		begin
 			render json: {
 				message: "Success!",
 				memes: @meme
-
 			}
 		rescue
 			render json: {
@@ -49,4 +50,16 @@ class MemesController < ApplicationController
 		end
 	end
 
+	def save_meme
+		@saved = Meme.last
+
+		if @saved.save
+			render json: {
+				meme: {phrase: @saved.text, url: @saved.image_url}
+			}
+		else
+			render json: {message: "Error Saving"}
+		end
+		# render json: {phrase: SavedMeme.last.text, url: SavedMeme.last.image_url}
+	end
 end

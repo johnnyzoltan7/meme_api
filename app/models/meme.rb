@@ -47,7 +47,7 @@ class Meme < ApplicationRecord
 		{ :name => "eightteen",	:text => "88" },
 		{ :name => "nineteen", 	:text => "99" },
 		{ :name => "twenty", 	:text => "20" },
-		{ :name => "twentyone",	:text => "21" }	
+		{ :name => "twentyone",	:text => "21" }
 	].freeze
 
 	def self.generate_random_url
@@ -59,6 +59,4 @@ class Meme < ApplicationRecord
 	end
 
 	private 
-
-
 end
