@@ -22,7 +22,7 @@ class MemesController < ApplicationController
 	end
 
 	def return_all
-		@meme = Meme.all
+		@meme = Meme.all.limit(Meme.count-1)
 
 		begin
 			render json: {
