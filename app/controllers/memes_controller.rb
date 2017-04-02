@@ -37,16 +37,22 @@ class MemesController < ApplicationController
 	end
 
 	def save_meme
-		@saved = Meme.new
-		@saved = Meme.last.dup
 
-		if @saved.save
-			render json: {
-				meme: {phrase: @saved.text, url: @saved.image_url}
-			}
+		if(Meme.exists?)
+			@saved = Meme.new
+			@saved = Meme.last.dup
+
+			if @saved.save
+				render json: {
+					meme: {phrase: @saved.text, url: @saved.image_url}
+				}
+			else
+				render json: {message: "Error Saving"}
+			end
+			# render json: {phrase: SavedMeme.last.text, url: SavedMeme.last.image_url}
 		else
-			render json: {message: "Error Saving"}
+			render json: {message: "Y U NO make meme first??"}
 		end
-		# render json: {phrase: SavedMeme.last.text, url: SavedMeme.last.image_url}
 	end
+	
 end
