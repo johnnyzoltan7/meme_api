@@ -1,6 +1,6 @@
 class Meme < ApplicationRecord
-  validates :text, presence: true
-  validates :image_url,  presence: true
+  validates :text, 		presence: true
+  validates :image_url, presence: true
 
   MEME_URLS = [
 		{ :name => "one", 		:url => "https://cdn.meme.am/images/2965710.jpg"},
@@ -56,6 +56,10 @@ class Meme < ApplicationRecord
 
 	def self.generate_random_text
 		MEME_TEXT.sample[:text]
+	end
+
+	def self.number_of_dup(a)
+		Meme.all.where(text:a.text,image_url:a.image_url).count
 	end
 
 	private

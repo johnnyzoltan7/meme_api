@@ -1,14 +1,17 @@
 class MemesController < ApplicationController
 	def generate
-		@meme = Meme.new
-		@meme.text = Meme.generate_random_text
-		@meme.image_url = Meme.generate_random_url
-
-		if (!Meme.last.nil?)
-			Meme.last.destroy
+		if (!Meme.exists?)
+			@meme = Meme.new
+		else
+			@meme = Meme.last
 		end
 
-		if @meme.save
+		# @meme.text = Meme.generate_random_text
+		# @meme.image_url = Meme.generate_random_url
+
+		if @meme.update(
+			text: Meme.generate_random_text, 
+			image_url: Meme.generate_random_url)
 			render json: {
 				message: "Success!",
 				phrase: @meme.text,
@@ -22,7 +25,7 @@ class MemesController < ApplicationController
 	end
 
 	def return_all
-		@meme = Meme.all.limit(Meme.count-1)
+		@meme = Meme.all.limit(Meme.count)
 
 		begin
 			render json: {
@@ -41,18 +44,20 @@ class MemesController < ApplicationController
 		if(Meme.exists?)
 			@saved = Meme.new
 			@saved = Meme.last.dup
-
-			if @saved.save
-				render json: {
-					meme: {phrase: @saved.text, url: @saved.image_url}
-				}
+			if(Meme.number_of_dup(@saved) < 2)
+				if @saved.save
+					render json: {
+						meme: {phrase: @saved.text, url: @saved.image_url}
+					}
+				else
+					render json: {message: "Error Saving"}
+				end
 			else
-				render json: {message: "Error Saving"}
+				render json: {message: "Y U NO make new meme first??"}
 			end
-			# render json: {phrase: SavedMeme.last.text, url: SavedMeme.last.image_url}
 		else
 			render json: {message: "Y U NO make meme first??"}
 		end
 	end
-	
+
 end

@@ -1,0 +1,11 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (9.8ms)[0m  [1m[31mDELETE FROM "memes"[0m
+  [1m[36mFixture Insert (0.7ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2017-04-02 07:51:10.606488', '2017-04-02 07:51:10.606488', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "memes" ("text", "image_url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2017-04-02 07:51:10.606488', '2017-04-02 07:51:10.606488', 298486374)[0m
+  [1m[35m (41.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+MemesControllerTest: test_should_get_generate
+---------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
