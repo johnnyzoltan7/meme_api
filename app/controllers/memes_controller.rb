@@ -10,7 +10,7 @@ class MemesController < ApplicationController
 		# @meme.image_url = Meme.generate_random_url
 
 		if @meme.update(
-			text: Meme.generate_random_text, 
+			text: Meme.generate_random_text,
 			image_url: Meme.generate_random_url)
 			render json: {
 				message: "Success!",
