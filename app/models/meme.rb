@@ -20,10 +20,10 @@ class Meme < ApplicationRecord
 		{ :name => "diver", 	:url => "http://thefw.com/files/2012/05/funny-diver-faces-11.jpg"},
 		{ :name => "mcdonalds", 	:url => "https://s-media-cache-ak0.pinimg.com/236x/05/7d/5b/057d5bb55114aec90bbd252781ae0c79.jpg"},
 		{ :name => "cats",	:url => "http://yadbw.com/wp-content/uploads/2017/04/wpid-funny-cat-images-with-captions.jpg"},
-		{ :name => "eightteen",	:url => "88"},
-		{ :name => "nineteen", 	:url => "99"},
-		{ :name => "twenty", 	:url => "20"},
-		{ :name => "twentyone",	:url => "21"}
+		{ :name => "eightteen",	:url => "https://www.gannett-cdn.com/-mm-/68a79264061c59df36124ef7996341e972f65d97/c=0-761-8100-5337&r=x329&c=580x326/local/-/media/2017/02/21/USATODAY/USATODAY/636232917167728769-futurama.png"},
+		{ :name => "nineteen", 	:url => "https://pbs.twimg.com/media/B7LP6T_CQAAOrv2.jpg"},
+		{ :name => "twenty", 	:url => "https://s-media-cache-ak0.pinimg.com/736x/0d/11/ba/0d11ba2525b9f867ca90a08f6468832d.jpg"},
+		{ :name => "twentyone",	:url => "https://i.ytimg.com/vi/FBUaE8Fop8U/maxresdefault.jpg"}
 	].freeze
 
 	MEME_TEXT = [
