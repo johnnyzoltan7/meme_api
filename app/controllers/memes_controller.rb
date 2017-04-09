@@ -15,11 +15,13 @@ class MemesController < ApplicationController
 			render json: {
 				message: "Success!",
 				phrase: @meme.text,
-				url: @meme.image_url
+				url: @meme.image_url,
+				status: 200
 			}
 		else
 			render json: {
-				message: "could not generate meme. feeels bad maaan"
+				message: "could not generate meme. feeels bad maaan",
+				status: 500
 			}
 		end
 	end
@@ -30,11 +32,13 @@ class MemesController < ApplicationController
 		begin
 			render json: {
 				message: "Success!",
-				memes: @meme
+				memes: @meme,
+				status: 200
 			}
 		rescue
 			render json: {
-				message: "something went wrong on the server"
+				message: "something went wrong on the server",
+				status: 500
 			}
 		end
 	end
@@ -47,16 +51,17 @@ class MemesController < ApplicationController
 			if(Meme.number_of_dup(@saved) < 2)
 				if @saved.save
 					render json: {
-						meme: {phrase: @saved.text, url: @saved.image_url}
+						meme: {phrase: @saved.text, url: @saved.image_url},
+						status: 200
 					}
 				else
-					render json: {message: "Error Saving"}
+					render json: {message: "Error Saving", status: 500}
 				end
 			else
-				render json: {message: "Y U NO make new meme first??"}
+				render json: {message: "Y U NO make new meme first??", status: 201}
 			end
 		else
-			render json: {message: "Y U NO make meme first??"}
+			render json: {message: "Y U NO make meme first??", status: 202}
 		end
 	end
 
