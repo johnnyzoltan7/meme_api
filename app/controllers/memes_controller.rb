@@ -27,7 +27,13 @@ class MemesController < ApplicationController
 	end
 
 	def return_all
-		@meme = Meme.all.limit(Meme.count - 1)
+		if (@meme = Meme.all.limit(Meme.count - 1))
+		else
+				@meme = Meme.new
+				@meme.text=''
+				@meme.image_url=''
+
+		end
 
 		begin
 			render json: {
